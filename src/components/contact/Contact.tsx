@@ -18,13 +18,12 @@ export default function Contact() {
           <div key={idx} className="flex items-center mt-10">
             <div className="avatar ">
               <div className={`w-16 rounded-full ${data.color}`}>
-                <Image className="size-4" src={data.logo} width={70} height={70} alt='logo' />
+                <Image className="size-4" src={data.logo} width={50} height={50} alt='logo' />
               </div>
             </div>
             <label
             htmlFor="my_modal_6"
-              className="btn ml-6 font-semibold text-[17px]"              
-            >
+              className="btn ml-6 font-semibold text-[17px]"  >                  
              {data.name}
             </label>                   
           </div>

@@ -1,13 +1,13 @@
-
 import logo from '@/assets/images/icon-working.png'
 import ButtonLink from '@/ui/ButtonLink';
 import Image from 'next/image'
-import { Link } from 'react-scroll'
+
 
 const menuItems = ["About", "Projects", "Blog", "Contact"];
 
-
 export default function Navbar() {
+
+
   return (
     <div className="drawer">
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />

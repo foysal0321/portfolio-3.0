@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import ButtonLink from "@/ui/ButtonLink";
 import Navbar from "../navbar/Navbar";
-import {Link} from 'react-scroll'
+
 
 export default function ProfileContext() {
   return (
