@@ -12,13 +12,11 @@ export default function SkillPage() {
     }
 
   return (
-     <div className="py-20  max-w-[1000px] mx-auto p-5">
+     <div className="py-20  max-w-[1100px] mx-auto p-5">
     <h2 className="text-3xl py-6 font-bold">Add A Skill</h2>
     
     <form onSubmit={handleSubmit(submit)}>
-
       <Input type='text' label='Technology' register={register} name='name' />
-
       <button className="btn mt-8 btn-primary w-80 md:w-[500px] ">Sumit</button>
     </form>
   </div>
