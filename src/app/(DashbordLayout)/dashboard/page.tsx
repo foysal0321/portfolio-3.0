@@ -1,6 +1,6 @@
 
-export default function page() {
+export default function BlogPage() {
   return (
-    <div>page</div>
+    <div>Blogpage</div>
   )
 }

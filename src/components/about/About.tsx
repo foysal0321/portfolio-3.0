@@ -47,6 +47,7 @@ export default function About() {
             +8801869676921
           </p>
         </div>
+        <button className="btn btn-secondary">Secondary</button>
       </div>
     </div>
     </div>
