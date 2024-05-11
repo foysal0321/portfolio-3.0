@@ -1,13 +1,14 @@
+"use client"
 /* eslint-disable react/no-unescaped-entities */
-//import { useForm } from "@formspree/react";
+import { useForm } from "@formspree/react";
 import helloimg from '@/assets/images/icon-wave.png'
 import Image from 'next/image'
 
 export default function ContactForm() {
-    // const [state, handleSubmit] = useForm("moqbgpgb");
-    // if (state.succeeded) {
-    //   return alert("Successfuly Submited");
-    // }
+    const [state, handleSubmit] = useForm("moqbgpgb");
+    if (state.succeeded) {
+      return alert("Successfuly Submited");
+    }
 
   return (
     <div>
@@ -23,7 +24,7 @@ export default function ContactForm() {
           </label>
         </div>
 
-        <form  method="dialog" className="">
+        <form onSubmit={handleSubmit}  method="dialog" className="">
           <div className="p-0 mt-2 md:p-3">
             <div className=" form-control w-full max-w-xs">
               <label className="label">
@@ -73,7 +74,7 @@ export default function ContactForm() {
             </div>
             <button
               type="submit"
-              //disabled={state.submitting}
+              disabled={state.submitting}
               className="btn btn-outline btn-md btn-error rounded-full w-72 md:w-[420px]"
             >
               Submit
