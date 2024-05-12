@@ -1,6 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 
-export default function About() {
+async function About () {
+  
+  const res = await fetch(`http://localhost:5000/skills`, {
+    method: 'GET'
+  })
+  const skillData = await res.json()
+
   return (
     <div className="py-8 bg-slate-50" id="About">
     <div className=" md:p-14 p-6 " >
@@ -20,6 +26,14 @@ export default function About() {
           JavaScript / TypeScript, HTML and CSS related.
         </p>
         <p className="mt-3 text-gray-700">
+         Currently I'm learning such as: 
+          {
+          skillData.map((data: any) => <span key={data._id}> {data.name},</span>)
+         }
+          </p> 
+        
+       
+        <p className="mt-3 text-gray-700">
           I've worked with my personal projets over the years, I specialize in
           developing web site/apps.
         </p>
@@ -28,12 +42,7 @@ export default function About() {
         <p className="text-gray-700 ">
         I've Completed Web Development Course And Next Level Web development from <a className="underline" href="https://web.programming-hero.com/" target="blank">Programming Hero</a> | 
         And completed HSC from Noakhali Govt. College
-        </p>
-        <h5 className=" font-bold text-lg py-2 mt-6">Personal</h5>
-        <p className="text-gray-700 ">
-        I am 23 year old self taught junior Web Developer based in Cumilla, Bangladesh.
-         I love to coding and travel.
-        </p>
+        </p>      
 
         <br />
         <div className="text-gray-700 mt-6 ">
@@ -47,9 +56,10 @@ export default function About() {
             +8801869676921
           </p>
         </div>
-        <button className="btn btn-secondary">Secondary</button>
       </div>
     </div>
     </div>
   )
 }
+
+export default About
