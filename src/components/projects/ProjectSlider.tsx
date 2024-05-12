@@ -10,7 +10,9 @@ import Image from "next/image";
 async function ProjectSlider() {
 
   const res = await fetch(`http://localhost:5000/projects`, {
-    method: 'GET'
+    next: {
+      revalidate: 30
+    }
   })
   const projectsData = await res.json()
 
@@ -30,7 +32,7 @@ async function ProjectSlider() {
               <div className="hero-content flex-col lg:flex-row text-black">
                 <Image src={data.image} width={330} height={420} alt="project" className="h-[420px]" />
                 <div>
-                  <a href={data.liveLink} target="_blank">
+                  <a href={data.liveurl} target="_blank">
                     <h1 className="text-xl font-bold m-2 hover:text-slate-500">
                       {data.name}
                     </h1>

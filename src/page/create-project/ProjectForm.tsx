@@ -67,37 +67,3 @@ export default function ProjectForm() {
   )
 }
 
-
-// E-Shop Spot
-// The website is designed for products reselling and this is a ecommerce website
-// First of all a user has to sign up then can see all the products and can buy and sell,
-
-// Admin control, and implemented Payment gateway method with stripe
-
-// Used Technologies: React, Tailwind, Firebase Auth, Jwt, Stripe, Node, Express, MongoDB.
-
-
-// Northern Lights University
-// (Team Project), In this website we implement every kind of opportunity for students
-// Students can see our campus img and activity in gallery and event section,
-
-// Used Technologies: TypeScript,Next Js,React,tailwind,Node Js,Firebase Auth.
-
-
-// Disaster Relief
-// The website is created for Distribution of Donations Management Platform,
-// First of all a user has to sign up then user can create/update/ delete Relief Item.,
-
-// User can donate and give feedback if they want and become a volunteer
-
-// Used Technologies: Next Js, Redux, tailwind css, Node, Express, mongodb.
-
-
-// MoneyRecon
-// The web application is designed to create a expense budget sheet for the user
-// User is logged in he can see the dashboard page and he can make budget sheet,
-
-// And a chart of the budget will be created, users can see the history of every budget
-
-// Used Technologies: React, Tailwind, Redux, Chart.js, Node, Express, MongoDB.
-
