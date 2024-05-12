@@ -1,5 +1,6 @@
 "use client"
 
+import { addSkill } from "@/api/skillApi";
 import Input from "@/ui/Input";
 import { useForm } from "react-hook-form";
 
@@ -7,7 +8,13 @@ export default function SkillPage() {
     const {register, handleSubmit, reset} = useForm()
 
     const submit = (data: any) => {
-        console.log(data);
+      addSkill(data)
+      .then(res => res.json())
+      .then(data => {
+        if(data?.acknowledged){
+          alert('Successfully!')
+        }
+      })
         
     }
 
