@@ -5,16 +5,24 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import Image from "next/image";
+import { projectsData } from "@/api/projectApi";
+import { useEffect, useState } from "react";
 
 
-async function ProjectSlider() {
 
-  const res = await fetch(`http://localhost:5000/projects`, {
-    next: {
-      revalidate: 30
-    }
-  })
-  const projectsData = await res.json()
+
+export default function ProjectSlider() {
+  const [projectData, setProjectData] = useState([])
+
+  useEffect(() => {
+     fetch(`http://localhost:5000/projects`)
+    .then(res => res.json())
+    .then(data => {
+      setProjectData(data)
+      console.log(data)
+    })
+  },[])
+
 
   return (
     <div className=" ">
@@ -26,7 +34,7 @@ async function ProjectSlider() {
         modules={[Pagination]}
         className="mySwiper w-[330px] md:w-[750px] flex flex-wrap"
       >
-        {projectsData.map((data: any) => (
+        {projectData.map((data: any) => (
           <SwiperSlide key={data._id}>
             <div className="hero py-10 ">
               <div className="hero-content flex-col lg:flex-row text-black">
@@ -72,5 +80,3 @@ async function ProjectSlider() {
     </div>
   );
 }
-
-export default ProjectSlider;
