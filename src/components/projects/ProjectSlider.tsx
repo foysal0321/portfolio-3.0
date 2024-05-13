@@ -15,13 +15,13 @@ export default function ProjectSlider() {
   const [projectData, setProjectData] = useState([])
 
   useEffect(() => {
-     fetch(`http://localhost:5000/projects`)
-    .then(res => res.json())
-    .then(data => {
-      setProjectData(data)
-      console.log(data)
-    })
-  },[])
+    fetch(`https://portfolio-wine-three-46.vercel.app/projects`)
+      .then(res => res.json())
+      .then(data => {
+        setProjectData(data)
+        console.log(data)
+      })
+  }, [])
 
 
   return (

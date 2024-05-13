@@ -1,5 +1,5 @@
 export const addProject = (data: any) => {
-    const res = fetch(`http://localhost:5000/projects`, {
+    const res = fetch(`https://portfolio-wine-three-46.vercel.app/projects`, {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
@@ -10,15 +10,15 @@ export const addProject = (data: any) => {
 }
 
 export const deleteProject = (data: any) => {
-    const res = fetch(`http://localhost:5000/projects/${data._id}`, {
+    const res = fetch(`https://portfolio-wine-three-46.vercel.app/projects/${data._id}`, {
         method: 'DELETE',
     })
     return res
 }
 
 
-export async function projectsData () {
-    const res = await fetch(`http://localhost:5000/projects`, {
+export async function projectsData() {
+    const res = await fetch(`https://portfolio-wine-three-46.vercel.app/projects`, {
         next: {
             revalidate: 30
         }

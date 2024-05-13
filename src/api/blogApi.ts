@@ -1,5 +1,5 @@
-export const addSkill = (data: string) => {
-    const res = fetch(`https://portfolio-wine-three-46.vercel.app/skills`, {
+export const addBlog = (data: any) => {
+    const res = fetch(`https://portfolio-wine-three-46.vercel.app/blogs`, {
         method: 'POST',
         headers: {
             'content-type': 'application/json'

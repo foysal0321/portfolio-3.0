@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Foysal",
   description: "A Frontend Developer Portfolio",
   icons: {
-    icon: '/image/icon-working.png'
+    icon: '/icon-working.png'
   }
 };
 
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="light">
       <body className={inter.className}>
-      <link rel="icon" href="/public/images/icon-working.png" sizes="any" />
+      <link rel="icon" href="/public/icon-working.png" sizes="any" />
         {children}
         </body>
     </html>
