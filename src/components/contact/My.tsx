@@ -1,20 +1,20 @@
 "use client"
-
 import { useForm } from "@formspree/react";
 import helloimg from '@/assets/images/icon-wave.png'
 import Image from 'next/image'
 
-export default function ContactForm (): void | JSX.Element  {
 
-  const [state, handleSubmit] = useForm("moqbgpgb");
-  // if (state.succeeded) {
-  //   return "Successfuly Submited";
-  // }
+export default function My() {
+
+    const [state, handleSubmit] = useForm("moqbgpgb");
+    if (state.succeeded) {
+      //return 'ok'
+    }
 
   return (
     <div>
-      <input type="checkbox" id="my_modal_6" className="modal-toggle" />
-      <div className="modal" role="dialog">
+        <input type="checkbox" id="my_modal_6" className="modal-toggle" />
+        <div className="modal" role="dialog">
         <div className="modal-box">
           <div className="avatar flex flex-wrap justify-between items-center ">
             <div className="w-12 mt-4 rounded-full  bg-[#8EFDB0]">
