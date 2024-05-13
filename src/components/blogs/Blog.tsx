@@ -1,5 +1,5 @@
 "use client"
-import DOMPurify from "dompurify"
+//import DOMPurify from "dompurify"
 import { blogData } from "./BlogData"
 
 export default function Blog() {
@@ -21,9 +21,9 @@ export default function Blog() {
               <div className="collapse-title text-xl font-medium">
                 {blog.name}
                 <div
-                  dangerouslySetInnerHTML={{
-                    __html: DOMPurify.sanitize(blog.description),
-                  }}
+                  // dangerouslySetInnerHTML={{
+                  //   __html: DOMPurify.sanitize(blog.description),
+                  // }}
                 ></div>
               </div>
               <div className="collapse-content">

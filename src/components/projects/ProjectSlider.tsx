@@ -5,13 +5,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import Image from "next/image";
-import { projectsData } from "@/api/projectApi";
 import { useEffect, useState } from "react";
 
 
-
-
-export default function ProjectSlider() {
+export default  function ProjectSlider() {
   const [projectData, setProjectData] = useState([])
 
   useEffect(() => {
@@ -19,9 +16,15 @@ export default function ProjectSlider() {
       .then(res => res.json())
       .then(data => {
         setProjectData(data)
-        console.log(data)
+        //console.log(data)
       })
   }, [])
+  // const res = await fetch(`https://portfolio-wine-three-46.vercel.app/projects`,{
+  //   next:{
+  //     revalidate: 30
+  //   }
+  // })
+  // const projectData = await res.json()
 
 
   return (
@@ -74,7 +77,7 @@ export default function ProjectSlider() {
                 </div>
               </div>
             </div>
-          </SwiperSlide>
+          </SwiperSlide>        
         ))}
       </Swiper>
     </div>
