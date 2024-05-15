@@ -7,7 +7,9 @@ export default function layout({ children }: { children: any }) {
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content justify-center">
                     <label htmlFor="my-drawer-2" className="btn  drawer-button lg:hidden">Open drawer</label>
+                    
                     {children}
+
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>

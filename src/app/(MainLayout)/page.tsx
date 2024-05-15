@@ -1,6 +1,6 @@
 import HomeContext from "@/components/Layout/HomeContext";
 import ProfileContext from "@/components/Layout/ProfileContext";
-import Image from "next/image";
+
 
 export default function HomePage() {
   return (
@@ -10,7 +10,7 @@ export default function HomePage() {
       </div>
       <div className="min-w-fit">
         <HomeContext />
-      </div>
+      </div>        
     </div>
   );
 }

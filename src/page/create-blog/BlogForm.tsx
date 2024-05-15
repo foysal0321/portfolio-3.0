@@ -46,17 +46,15 @@ export default function BlogForm() {
 
   }
   return (
-    <div>
+    <div className='max-w-[1100px] mx-auto'>
           <form onSubmit={handleSubmit(submit)}>
-        <div className="flex flex-wrap gap-6">
           <div className="">
-            <Input type='text' label='Title' register={register} name='title' />
-           
+            <Input type='text' label='Title' register={register} name='title' />          
             <input {...register('image')} type="file" className="file-input file-input-bordered w-80 md:w-[500px] mt-2" /> <br />
-          </div>
-         
-        </div>
+          </div>      
+
         <JoditEditor
+        className='max-w-[1100px] mx-auto mt-4'
         ref={editor}
         value={content}
         onChange={content => setContent(content)}
