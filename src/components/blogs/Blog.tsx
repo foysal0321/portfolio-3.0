@@ -1,36 +1,44 @@
-"use client"
-//import DOMPurify from "dompurify"
-import { blogData } from "./BlogData"
 
-export default function Blog() {
+import Link from "next/link"
+import { ArrowRight } from 'lucide-react';
 
-  // const res = await fetch(`https://portfolio-wine-three-46.vercel.app/blogs`, {
-  //   method: 'GET'
-  // })
-  // const blogData = await res.json()
+
+export default async function Blog() {
+
+  const res = await fetch(`https://portfolio-eta-seven-59.vercel.app/blogs`, {
+    next: {
+      revalidate: 30
+    }
+  })
+  const blogs = await res.json()
 
   return (
-    <div id="Blog" className="py-10">
-      <div className="md:p-14 p-6">
-        <h1 className="text-4xl font-semibold">Blog</h1>
-
-        <div className="mt-8 py-2">
-          {blogData.map((blog: any) => (
-            <div key={blog._id} className="collapse collapse-arrow bg-base-200 my-4">
-              <input type="radio" name="my-accordion-2" />
-              <div className="collapse-title text-xl font-medium">
-                {blog.name}
-                <div
-                  // dangerouslySetInnerHTML={{
-                  //   __html: DOMPurify.sanitize(blog.description),
-                  // }}
-                ></div>
-              </div>
-              <div className="collapse-content">
-                <a href="#">See More</a>
-              </div>
+    <div className='bg-[#232121]'>
+      <div className="p-7 max-w-[1380px] mx-auto" id="blogs">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 py-20 gap-6">
+          <div className="" data-aos="fade-out">
+            <h2 className="text-xl font-semibold tracking-wider text-gray-100"> ARTICLES
+            </h2>
+            <p className="md:text-5xl text-3xl font-bold text-gray-100">Latest Articles</p>
+            <div className='flex flex-wrap'>
+              <Link href={`/blogs`} className="py-2 mt-4 font-semibold">View all blogs </Link>
+              <ArrowRight className='mx-1 mt-6' />
             </div>
-          ))}
+          </div>
+          <div>
+            {
+              blogs.map((blog: any, ind: string) => (
+                <><div key={ind} className=" py-4">
+                  <p className="py-2">{blog.date} <span className='mx-1'> {blog.duration}</span> </p>
+                  <p className="font-semibold md:text-2xl text-xl mt-2 text-gray-100"> {blog.title}</p>
+                  <div className='flex flex-wrap'>
+                    <Link href={`/blogs/${blog._id}`} className="py-2 mt-4 font-semibold hover:text-gray-100">Read the article </Link>
+                    <ArrowRight className='mx-1 mt-6' />
+                  </div>
+                </div><hr className='text-gray-400' /></>
+              ))
+            }
+          </div>
         </div>
       </div>
     </div>

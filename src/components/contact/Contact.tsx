@@ -1,39 +1,37 @@
 /* eslint-disable react/no-unescaped-entities */
-import Image from "next/image";
-import { contactsData } from "./ContactData";
-import My from "./My";
 import ContactForm from "./ContactForm";
+import { Phone, Mail, MapPin } from 'lucide-react';
+
 
 export default function Contact() {
   return (
-    <div className="py-16 bg-slate-50" id="Contact">
-
-        
-     <div className=" md:p-14 p-6  h-[90vh]" >
-      <h1 className="text-4xl font-semibold py-2">Contact </h1>
-      <h3 className="text-xl mt-8 py-2 font-semibold">Don't be shy!</h3>
-      <p className="text-gray-600  ">
-        If you have a project in mind or would like to make an enquiry simply
-        select one <br /> of the following options.
-      </p>
-      <div className="mt-16">
-        {contactsData.map((data, idx) => (
-          <div key={idx} className="flex items-center mt-10">
-            <div className="avatar ">
-              <div className={`w-16 rounded-full ${data.color}`}>
-                <Image className="size-4" src={data.logo} width={50} height={50} alt='logo' />
-              </div>
+    <div className='bg-[#232121]'>
+      <div className="md:py-24 py-16 max-w-[1380px] mx-auto p-7 tex-[#fff]" id="contact">
+        <h1 className="text-3xl md:text-5xl font-extrabold text-gray-100 ">Get in touch</h1>
+        <div className='grid lg:grid-cols-2 grid-cols-1 gap-10 py-4'>
+          <div className=''>
+            <h1 className="text-xl py-6 " data-aos="fade-out">Have a project in mind? Looking to partner or work <br /> together? Reach out through the form and I'll get back to <br /> you in the next 24 hours.</h1>
+            <div className='flex py-4 mt-4 text-gray-300'>
+              <Phone className='' />
+              <p className='text-xl mx-4 font-semibold tracking-wide'> +8801869676921</p>
             </div>
-            <label
-            htmlFor="my_modal_6"
-              className="btn ml-6 font-semibold text-[17px]"  >                  
-             {data.name}
-            </label>                   
+            <div className='flex py-4 text-gray-300'>
+              <Mail />
+              <p className='text-xl mx-4 font-semibold  tracking-wide'> foysalx4@gmail.com</p>
+            </div>
+            <div className='flex py-4 text-gray-300'>
+              <MapPin />
+              <p className='text-xl mx-4 font-semibold  tracking-wide'> Cumilla, Dhaka, Bangladesh </p>
+              <p></p>
+            </div>
           </div>
-        ))}
+          <div>
+
+            <ContactForm />
+          </div>
+        </div>
       </div>
-    <My />
-    </div> 
     </div>
   )
 }
+
