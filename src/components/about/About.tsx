@@ -1,18 +1,20 @@
 import React from 'react'
 /* eslint-disable react/no-unescaped-entities */
-import myimage from '@/assets/images/FB_IMG_1712911530141.jpg'
+import myimage from '@/assets/images/foysal-fb.jpg'
 import Image from "next/image"
+
+
 export default function About() {
   return (
     <div className='bg-[#232121]'>
       <div className="p-7 max-w-[1380px] mx-auto md:py-24 py-16" id="about">
         <div className="py-6">
           <h2 className="text-xl font-semibold tracking-wider">FULLSTACK DEVELOPER</h2>
-          <p className="md:text-5xl text-3xl font-bold text-gray-100">That's me!</p>
+          <p className="md:text-5xl text-3xl font-extrabold text-gray-200">About me</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 py-4 gap-6">
           <div className="">
-            <Image className='h-[600px]' src={myimage} height={600} width={590} alt="back.png" />
+            <Image className='' src={myimage} height={620} width={590} alt="back.png" />
           </div>
           <div data-aos="fade-in">
             <div className="">

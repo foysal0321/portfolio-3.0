@@ -4,21 +4,19 @@ import Link from "next/link";
 export default function ProfileContext() {
   return (
     <div className="">
-      <div className="text-white p-5">
+      <div className="p-5">
         <div className="pt-1 ">
-          <h1 className="md:text-4xl text-3xl font-semibold mt-10 header-title text-gray-100 text-wrap">
-            Hello. I'm a Frontend
+          <h4 className="text-[21px] mt-3 tracking-wide">
+            Hello, I'm  </h4>
+            <h2 className="md:text-5xl text-3xl text-gray-200 py-3 font-semibold ">Foysal Hossain</h2>         
+          <h1 className="md:text-2xl text-xl font-semibold mt-4  text-gray-300 text-wrap tracking-wide">
+            Web Developer & Designer
           </h1>
-          <h1 className="md:text-6xl text-3xl font-semibold mt-4 header-title text-gray-100 text-wrap">
-            Web Developer !
-          </h1>
-          <h4 className="mt-12 text-gray-300 text-[19px]" data-aos="fade-out">
-            My name is Foysal Hossain, a Fullstack Web Developer
-            <br />
-            based in Bangladesh. I create user-friendly interfaces <br /> for fast-growing startups.
+          <h4 className="mt-14 text-[19px]" data-aos="fade-out">
+          Building user-friendly interfaces for fast-growing startups <br /> using modern frontend technologies.                       
           </h4>
           <Link href='/#contact'>
-            <button className="btn btn-outline btn-md spe btn-accent rounded-full mt-12 text-[17px] " data-aos="fade-up">
+            <button className="btn btn-outline rounded-full mt-12 text-[16px] " data-aos="fade-up">
               Book a call
             </button>
           </Link>
@@ -26,15 +24,16 @@ export default function ProfileContext() {
           <div className="mt-28 info text-[18px] tracking-wide">
             <h2 className="text-gray-400">
               Find me at
-              <span className="text-white ml-2">
+               <span className="text-white cursor-pointer ml-1">
                 <a
-                  href="https://twitter.com/Foysal_09"
-                  className="underline "
+                  href="https://www.linkedin.com/in/foysal-hossain/"
                   target="_blank"
+                  className="underline mx-1"
                 >
-                  Twitter
+                  LinkedIn
                 </a>
-              </span>,
+              </span>
+             ,
               <span className="text-white ml-2">
                 <a
                   href="https://github.com/foysal0321"
@@ -45,13 +44,13 @@ export default function ProfileContext() {
                 </a>
               </span>
               , and
-              <span className="text-white cursor-pointer ml-1">
+              <span className="text-white ml-2">
                 <a
-                  href="https://www.linkedin.com/in/foysal-hossain/"
+                  href="https://twitter.com/Foysal_09"
+                  className="underline "
                   target="_blank"
-                  className="underline"
                 >
-                  LinkedIn
+                  Twitter
                 </a>
               </span>
               .
@@ -62,7 +61,7 @@ export default function ProfileContext() {
                 <a
                   href="https://drive.google.com/file/d/1jDS8-wr8MZdyjlSY8LNG0puWQz09Ig5f/view"
                   target="_blank"                  
-                  className="underline ml-1"
+                  className="underline mx-2"
                 >
                   Resume
                 </a>

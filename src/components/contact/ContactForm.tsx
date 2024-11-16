@@ -29,7 +29,7 @@ export default function ContactForm() {
                   name="name"
                   placeholder="Enter your fullname"
                   required
-                  className="input input-bordered w-72 md:w-[520px] h-[60px] bg-[#232121]"
+                  className="input input-bordered w-80 md:w-[520px] h-[60px] bg-[#232121]"
                 />
               </div>
               <div className="form-control w-full max-w-xs py-4">
@@ -41,7 +41,7 @@ export default function ContactForm() {
                   name="email"
                   placeholder="Enter your email address"
                   required
-                  className="input input-bordered w-72 md:w-[520px] h-[60px] bg-[#232121]"
+                  className="input input-bordered w-80 md:w-[520px] h-[60px] bg-[#232121]"
                 />
               </div>
 
@@ -51,7 +51,7 @@ export default function ContactForm() {
                 </label>
                 <textarea
                   name="message"
-                  className="textarea textarea-bordered w-72 md:w-[520px] h-[150px] bg-[#232121]"
+                  className="textarea textarea-bordered w-80 md:w-[520px] h-[150px] bg-[#232121]"
                   placeholder="Enter your message here.."
                   required
                 ></textarea>
@@ -60,7 +60,7 @@ export default function ContactForm() {
               <button
                 type="submit"
 
-                className="btn btn-outline btn-md rounded-full w-72 md:w-[520px] mt-8  text-[16px]"
+                className="btn btn-outline btn-md rounded-full w-80 md:w-[520px] mt-8  text-[16px]"
               >
                 Submit Now
               </button>

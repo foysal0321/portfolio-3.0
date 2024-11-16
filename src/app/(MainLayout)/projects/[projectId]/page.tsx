@@ -18,12 +18,12 @@ async function projectDetailpage({ params }: any) {
                 <div className="">
                     <p className="font-extrabold text-3xl mt-6 ">{project?.name}</p>
                     <div className=' mt-16 py-6'>
-                        <a href={project.liveurl} className="font-bold text-xl underline py-4">Visit Live URL</a>
+                        <a href={project.liveurl} target="_blank" className="font-bold text-xl underline py-4">Visit Live URL</a>
                     </div>
                     <a href={project.clienturl} className="font-bold text-xl py-4 underline">Visit Github RepositoryL</a>
                 </div>
                 <div>
-                    <h5 className='text-2xl font-semibold py-4'>Project Overview</h5>
+                    <h5 className='text-2xl font-semibold md:py-4 mt-8'>Project Overview</h5>
                     <p className='text-xl py-4'>{project.description}</p>
                 </div>
             </div>

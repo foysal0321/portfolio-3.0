@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { ArrowRight } from 'lucide-react';
 
 export default async function BlogPage() {
 
@@ -19,13 +20,14 @@ export default async function BlogPage() {
         blogData.map((blog: any, ind: string) => (
           <div key={ind} className="grid grid-cols-1 md:grid-cols-2 py-6">
             <Image className="h-[350px] w-[690px]" src={blog.image} height={300} width={600} alt='focus' />
-            <div className="bg-[#1b1a1a] text-white p-5">
-              <div className="max-w-[500px] mx-auto translate-y-10">
+            <div className="bg-[#1b1a1a]  p-5">
+              <div className="max-w-[500px] mx-auto ">
                 <p className="py-2">{blog.date} {blog.duration} </p>
-                <p className="font-bold text-4xl mt-6">{blog.title}</p>
-                <Link href={`/blogs/${blog._id}`}>
-                  <p className="py-2 mt-8 font-semibold">Read the article </p>
-                </Link>
+                <p className="font-bold md:text-4xl text-2xl mt-6 text-gray-100">{blog.title}</p>
+                <div className='flex flex-wrap mt-4'>
+              <Link href={`/blogs/${blog._id}`} className="py-2 mt-4 font-semibold">Read the article </Link>
+              <ArrowRight className='mx-1 mt-6' />
+            </div>              
               </div>
             </div>
           </div>

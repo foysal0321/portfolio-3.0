@@ -14,9 +14,9 @@ async function page({ params }: any) {
   return (
     <div className='max-w-[1380px] mx-auto py-16 p-5'>
       <div className="grid grid-cols-1 md:grid-cols-2 py-6 mt-12">
-        <div className="translate-y-20 ">
+        <div className=" ">
           <p className="py-2">{blog.date} <span className='mx-1'>{blog.duration}</span></p>
-          <p className="font-extrabold text-5xl mt-6 ">{blog.title}</p>
+          <p className="font-extrabold md:text-4xl text-2xl mt-6 py-4">{blog.title}</p>
         </div>
         <Image className="h-[350px] w-[690px]" src={blog.image} height={300} width={600} alt='focus' />
       </div>

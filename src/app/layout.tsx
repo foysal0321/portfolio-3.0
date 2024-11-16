@@ -25,9 +25,9 @@ export default function RootLayout({
 
   return (
     <html lang="en" data-theme="dark">
-      <Animation />
+      {/* <Animation /> */}
       <body className={inter.className}>
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
       </body>
     </html>

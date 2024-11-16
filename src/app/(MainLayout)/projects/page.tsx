@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { ArrowRight } from 'lucide-react';
 
 async function page() {
 
@@ -18,14 +19,15 @@ async function page() {
         projects.map((project: any, ind: string) => (
           // eslint-disable-next-line react/jsx-key
           <div key={ind} className="grid grid-cols-1 md:grid-cols-2 py-6">
-            <Image className="h-[430px] w-[690px] " src={project.image} height={300} width={600} alt='focus' />
-            <div className="bg-[#1b1a1a] md:h-[270px] h-[320px] text-white p-5 md:translate-y-20">
+            <Image className="h-[380px] w-[690px] " src={project.image} height={300} width={600} alt='focus' />
+            <div className="bg-[#1b1a1a]  p-5 ">
               <div className="">
-                <p className="py-4 text-2xl">Real Estate Business Website</p>
-                <p className="font-bold text-5xl mt-6">{project.name}</p>
-                <Link href={`/projects/${project._id}`}>
-                  <p className="py-2 mt-10 font-semibold">View Project </p>
-                </Link>
+                <p className="font-bold md:text-4xl text-2xl text-gray-100 mt-6">{project.name}</p>
+                <p className="text-xl py-4 mt-2">{project.description}</p>
+                <div className='flex flex-wrap mt-4'>
+              <Link href={`/projects/${project._id}`} className="py-2 mt-4 font-semibold">View Project</Link>
+              <ArrowRight className='mx-1 mt-6' />
+               </div>    
               </div>
             </div>
           </div>

@@ -28,7 +28,7 @@ export default function Navbar() {
 
   return (
     <div className="bg-[#232121] text-white fixed w-full z-30 border-b-2 border-b-zinc-800">
-      <div className='flex justify-between items-center h-20 max-w-[1300px] mx-auto text-zinc-950 p-4'>
+      <div className='flex justify-between items-center h-20 max-w-[1380px] mx-auto text-zinc-950 p-4'>
         <Link href='/'>
           <Image src={logo} height={180} width={150} alt='logo' className='mt-2' />
         </Link>
@@ -36,7 +36,7 @@ export default function Navbar() {
           {navItems.map((v: any) => (
             <li
               key={v.id}
-              className={`p-2 text-white text-[18px] rounded-xl mx-4 m-1 duration-300 hover:text-gray-500`}>
+              className={`p-2 text-white text-[18px] racking-wide rounded-xl mx-4 m-1 duration-300 hover:text-gray-500`}>
               {v.item}
             </li>
           ))}
