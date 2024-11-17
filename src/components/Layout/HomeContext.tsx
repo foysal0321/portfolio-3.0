@@ -9,7 +9,7 @@ import Skills from "../skills/Skills";
 
 export default function HomeContext() {
   return (
-    <div className='b-[#232121] text-hite'>
+    <div className=''>
        <Services />
         <About />
         <Projects />
@@ -17,7 +17,7 @@ export default function HomeContext() {
         <Skills />
         <Blog />
         <Contact />
-        <Footer /> 
+      
     </div>
   )
 }

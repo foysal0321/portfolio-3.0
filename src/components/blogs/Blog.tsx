@@ -28,14 +28,14 @@ export default async function Blog() {
           <div>
             {
               blogs.map((blog: any, ind: string) => (
-                <><div key={ind} className=" py-4">
+                <><div key={ind} className=" py-4 border-b-2 border-b-zinc-600">
                   <p className="py-2">{blog.date} <span className='mx-1'> {blog.duration}</span> </p>
                   <p className="font-semibold md:text-2xl text-xl mt-2 text-gray-200"> {blog.title}</p>
-                  <div className='flex flex-wrap'>
+                  <div className='flex flex-wrap '>
                     <Link href={`/blogs/${blog._id}`} className="py-2 mt-4 font-semibold hover:text-gray-100">Read the article </Link>
                     <ArrowRight className='mx-1 mt-6' />
                   </div>
-                </div><hr className='text-gray-600' /></>
+                </div></>
               ))
             }
           </div>

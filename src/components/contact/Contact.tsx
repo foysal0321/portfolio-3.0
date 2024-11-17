@@ -12,7 +12,7 @@ export default function Contact() {
         </div>
         <div className='grid lg:grid-cols-2 grid-cols-1 gap-10 py-2'>
           <div className=''>
-            <h1 className="text-[18px] py-3" data-aos="fade-out">Need a project, want to collaborate, or have questions?  Fill<br /> out the form, and I'll get back to you within 24 hours.</h1>
+            <h1 className="text-[18px] py-3" data-aos="fade-out">Need a project, want to collaborate, or have questions? <br /> Fill out the form, and I'll get back to you within 24 hours.</h1>
             <div className='flex py-4 mt-4 text-gray-300'>
               <Phone className='' />
               <p className='text-xl mx-4 font-semibold tracking-wide'> +8801869676921</p>

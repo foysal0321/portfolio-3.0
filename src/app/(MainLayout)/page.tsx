@@ -5,14 +5,16 @@ import Image from 'next/image'
 
 export default function HomePage() {
   return (
-    <div>
-      <div className="max-w-full flex flex-wrap justify-around bg-[#232121]">
+    <div className="bg-[#232121]">
+      <div className="max-w-[1380px] mx-auto ">
+        <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-20'>
         <div className="mt-28">
           <ProfileContext />
         </div>
-        <div className="t-24">
+        <div className="">
           <Image className='mt-12 object-cover h-[700px]' src={myimage2} width={600} height={620} alt="myimage" />
         </div>
+      </div>
       </div>
       <HomeContext />
     </div>

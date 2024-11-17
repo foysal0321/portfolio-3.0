@@ -8,7 +8,7 @@ export default function ProfileContext() {
         <div className="pt-1 ">
           <h4 className="text-[21px] mt-3 tracking-wide">
             Hello, I'm  </h4>
-            <h2 className="md:text-5xl text-3xl text-gray-200 py-3 font-semibold ">Foysal Hossain</h2>         
+            <h2 className="md:text-[52px] text-4xl text-gray-200 py-4 font-semibold ">Foysal Hossain</h2>         
           <h1 className="md:text-2xl text-xl font-semibold mt-4  text-gray-300 text-wrap tracking-wide">
             Web Developer & Designer
           </h1>
